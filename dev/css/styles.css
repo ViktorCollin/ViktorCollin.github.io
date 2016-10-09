@@ -49,7 +49,7 @@ h1{
 	text-transform: uppercase;
 	font-size: 4.5rem;
 	flex: 1 1 auto;
-	margin-top: 20vh;
+	margin-top: 15vh;
 }
 h2{
 	text-transform: uppercase;
@@ -133,7 +133,7 @@ section > .image-cover{
     display: flex;
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .countdown > div{
