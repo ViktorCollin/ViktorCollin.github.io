@@ -133,6 +133,7 @@ section > .image-cover{
     display: flex;
     text-align: center;
     font-size: 2rem;
+    margin-bottom: 30px;
 }
 
 .countdown > div{
