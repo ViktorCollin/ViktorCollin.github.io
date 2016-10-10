@@ -80,9 +80,7 @@ section{
 		width: 50vw;
 	}
 }
-section:nth-child(0){
-	order: 0;
-}
+
 section:nth-child(1){
 	order: 1;
 }
@@ -92,16 +90,16 @@ section:nth-child(2){
 section:nth-child(3){
 	order: 3;
 }
-@media screen and (min-width: 768px){
-	section:nth-child(1){
-		order: 2;
-	}
-	section:nth-child(2){
-		order: 1;
-	}
-}
 section:nth-child(4){
 	order: 4;
+}
+@media screen and (min-width: 768px){
+	section:nth-child(3){
+		order: 4;
+	}
+	section:nth-child(4){
+		order: 3;
+	}
 }
 section:nth-child(5){
 	order: 5;
@@ -137,16 +135,11 @@ section:nth-child(9){
 
 .split{
 	display: flex;
-	flex-direction: column;
-	max-width: 700px;
-	margin: 0 auto;
+	flex-direction: row;
 }
 
 .split > div{
 	max-width: 350px;
-}
-.split > div:nth-child(odd){
-	align-self: flex-end;
 }
 
 .persons{
