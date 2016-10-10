@@ -65,10 +65,58 @@ h4{
 	font-size: 1.5em;
 	margin-bottom: 0;
 }
+main{
+	display: flex;
+	flex-flow: row wrap;
+}
 
-section > .text,
-section > .image-cover{
+section{
 	min-height: 100vh;
+	width: 100vw;
+	
+}
+@media screen and (min-width: 768px){
+	section.half{
+		width: 50vw;
+	}
+}
+section:nth-child(0){
+	order: 0;
+}
+section:nth-child(1){
+	order: 1;
+}
+section:nth-child(2){
+	order: 2;
+}
+section:nth-child(3){
+	order: 3;
+}
+@media screen and (min-width: 768px){
+	section:nth-child(1){
+		order: 2;
+	}
+	section:nth-child(2){
+		order: 1;
+	}
+}
+section:nth-child(4){
+	order: 4;
+}
+section:nth-child(5){
+	order: 5;
+}
+section:nth-child(6){
+	order: 6;
+}
+section:nth-child(7){
+	order: 7;
+}
+section:nth-child(8){
+	order: 8;
+}
+section:nth-child(9){
+	order: 9;
 }
 
 .image-cover{
@@ -85,33 +133,33 @@ section > .image-cover{
 }
 .text > *{
 	max-width: 350px;
-
 }
 
-
-.split-col{
+.split{
 	display: flex;
-
-}
-.split-col > *{
-	flex: 0 0 100%;
-}
-
-@media screen and (min-width: 720px) {
-	.split-col > *{
-		flex: 1 1 50%;
-	}
+	flex-direction: column;
+	max-width: 700px;
+	margin: 0 auto;
 }
 
+.split > div{
+	max-width: 350px;
+}
+.split > div:nth-child(odd){
+	align-self: flex-end;
+}
 
 .persons{
 	display: flex;
 	justify-content: center;
-	min-height: calc(100vh - 4.66em);
+	flex-wrap: wrap;
+	
 }
 .persons > div{
+	min-height: 100vh;
 	flex: 0 0 auto;
-	width: 340px;
+	width: 100%;
+	max-width: 256px;
 	margin: 0 40px;
 }
 
@@ -130,7 +178,10 @@ section > .image-cover{
 
 /* CountDown */
 .countdown{
+	width: 100%;
+	max-width: 720px;
     display: flex;
+    justify-content: space-around;
     text-align: center;
     font-size: 2rem;
     margin-bottom: 20px;
@@ -140,7 +191,6 @@ section > .image-cover{
     font-size: 18px;
 }
 .countdown div > span{
-	width: 170px;
     font-size: 30px;
     display: block;
 }
