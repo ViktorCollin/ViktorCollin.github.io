@@ -55,6 +55,7 @@ h2{
 	text-transform: uppercase;
 	font-size: 3em;
 	color: rgb(38, 72, 128);
+	margin: 0;
 }
 
 h3{
@@ -75,9 +76,31 @@ section{
 	width: 100vw;
 	
 }
+
+.split{
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.split > div{
+	min-height: 50vh;
+	flex: 0 0 100%;
+	padding: 30px;
+}
 @media screen and (min-width: 768px){
-	section.half{
-		width: 50vw;
+	.split > div{
+		flex: 0 0 50%;
+	}
+}
+@media screen and (min-width: 768px){
+	.half{
+		width: 50%;
+	}
+	.onethrid{
+		width: 33.33%
+	}
+	.twothrids{
+		width: 66.67%
 	}
 }
 
@@ -116,7 +139,30 @@ section:nth-child(8){
 section:nth-child(9){
 	order: 9;
 }
-
+section:nth-child(10){
+	order: 10;
+}
+section:nth-child(11){
+	order: 11;
+}
+section:nth-child(12){
+	order: 12;
+}
+section:nth-child(13){
+	order: 13;
+}
+section:nth-child(14){
+	order: 14;
+}
+section:nth-child(15){
+	order: 15;
+}
+section:nth-child(16){
+	order: 16;
+}
+section:nth-child(17){
+	order: 17;
+}
 .image-cover{
 	background-size: cover;
 	background-position: center;
@@ -127,33 +173,33 @@ section:nth-child(9){
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 5px;
+	padding: 30px;
 }
-.text > *{
+.half.text > *{
 	max-width: 350px;
 }
-
-.split{
-	display: flex;
-	flex-direction: row;
+.twothrids.text > *{
+	max-width: 470px;
 }
 
-.split > div{
-	max-width: 350px;
-}
 
 .persons{
 	display: flex;
 	justify-content: center;
-	flex-wrap: wrap;
-	
+	align-items: center;
+	flex-direction: column;
+}
+@media screen and (min-width: 1010px) {
+	.persons{
+		flex-direction: row;
+	}
 }
 .persons > div{
 	min-height: 100vh;
 	flex: 0 0 auto;
 	width: 100%;
 	max-width: 256px;
-	margin: 0 40px;
+	margin: 20px 40px;
 }
 
 .persons img{
