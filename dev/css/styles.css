@@ -78,19 +78,7 @@ section{
 }
 
 .split{
-	display: flex;
-	flex-flow: row wrap;
-}
-
-.split > div{
 	min-height: 50vh;
-	flex: 0 0 100%;
-	padding: 30px;
-}
-@media screen and (min-width: 768px){
-	.split > div{
-		flex: 0 0 50%;
-	}
 }
 @media screen and (min-width: 768px){
 	.half{
@@ -115,14 +103,6 @@ section:nth-child(3){
 }
 section:nth-child(4){
 	order: 4;
-}
-@media screen and (min-width: 768px){
-	section:nth-child(3){
-		order: 4;
-	}
-	section:nth-child(4){
-		order: 3;
-	}
 }
 section:nth-child(5){
 	order: 5;
@@ -163,6 +143,27 @@ section:nth-child(16){
 section:nth-child(17){
 	order: 17;
 }
+@media screen and (min-width: 768px){
+	section:nth-child(3){
+		order: 4;
+	}
+	section:nth-child(4){
+		order: 3;
+	}
+	section:nth-child(7){
+		order: 8;
+	}
+	section:nth-child(8){
+		order: 7;
+	}
+	section:nth-child(11){
+		order: 12;
+	}
+	section:nth-child(12){
+		order: 11;
+	}
+}
+
 .image-cover{
 	background-size: cover;
 	background-position: center;
