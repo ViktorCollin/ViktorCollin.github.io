@@ -8,6 +8,9 @@ html, body{
 	font-size: 16px;
 	text-align: center;
 }
+h2, h3, h4, h5, h6{
+	font-family: 'Stalemate', cursive;
+}
 img{
 	max-width:100%;
 	max-height:100%;
@@ -53,15 +56,16 @@ h1{
 	font-weight: 300;
 }
 h2{
-	text-transform: uppercase;
-	font-size: 3em;
-	color: rgb(38, 72, 128);
+	/*text-transform: uppercase;*/
+	font-size: 5em;
+	/*color: rgb(38, 72, 128);*/
+
 	margin: 0;
 	font-weight: 300;
 }
 
 h3{
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	font-size: 2em;
 	font-weight: 300;
 }
@@ -78,6 +82,10 @@ section{
 	min-height: 100vh;
 	width: 100vw;
 	
+}
+p{
+	margin-top: 0px;
+	margin-bottom: 2em;
 }
 
 .split{
@@ -146,6 +154,42 @@ section:nth-child(16){
 section:nth-child(17){
 	order: 17;
 }
+section:nth-child(18){
+	order: 18;
+}
+section:nth-child(19){
+	order: 19;
+}
+section:nth-child(20){
+	order: 20;
+}
+section:nth-child(21){
+	order: 21;
+}
+section:nth-child(22){
+	order: 22;
+}
+section:nth-child(23){
+	order: 23;
+}
+section:nth-child(24){
+	order: 24;
+}
+section:nth-child(25){
+	order: 25;
+}
+section:nth-child(26){
+	order: 26;
+}
+section:nth-child(27){
+	order: 27;
+}
+section:nth-child(28){
+	order: 28;
+}
+section:nth-child(29){
+	order: 29;
+}
 @media screen and (min-width: 768px){
 	section:nth-child(3){
 		order: 4;
@@ -164,6 +208,12 @@ section:nth-child(17){
 	}
 	section:nth-child(12){
 		order: 11;
+	}
+	section:nth-child(15){
+		order: 16;
+	}
+	section:nth-child(16){
+		order: 15;
 	}
 }
 
@@ -184,6 +234,34 @@ section:nth-child(17){
 }
 .twothrids.text > *{
 	max-width: 470px;
+}
+
+.container{
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 20px;
+	margin: 20px;
+	padding: 10px;
+}
+
+.container p{
+	margin: 2em 0; 
+}
+
+.hotels{
+	display: flex;
+	justify-content: space-around;
+}
+
+
+@media screen and (max-width: 500px){
+	.container{
+		margin-bottom: 150px;
+	}
+}
+@media screen and (min-width: 500px){
+	.container{
+		margin-right: 370px;
+	}
 }
 
 
