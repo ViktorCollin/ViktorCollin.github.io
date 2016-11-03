@@ -16,7 +16,6 @@ img{
 	max-height:100%;
 	width: auto;
 	height: auto;
-	
 }
 header{
 	height: 100vh;
@@ -241,6 +240,7 @@ section:nth-child(29){
 	border-radius: 20px;
 	margin: 20px;
 	padding: 10px;
+	margin-bottom: 150px;
 }
 
 .container p{
@@ -252,12 +252,6 @@ section:nth-child(29){
 	justify-content: space-around;
 }
 
-
-@media screen and (max-width: 500px){
-	.container{
-		margin-bottom: 150px;
-	}
-}
 @media screen and (min-width: 500px){
 	.container{
 		margin-right: 370px;
@@ -267,35 +261,64 @@ section:nth-child(29){
 
 .persons{
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	flex-flow: row wrap;
+	
+}
+
+.person{
+	display: flex;
 	flex-direction: column;
 }
-@media screen and (min-width: 1010px) {
-	.persons{
+.person > *{
+	/*display: inline-block;*/
+}
+.person > *:after{
+	display: block;
+	padding-top: 50%;
+	content: '';
+}
+
+/*@media screen and (min-width: 500px){
+	.person{
 		flex-direction: row;
+
+	}
+	.person > *{
+		flex: 1 1 auto;
+		width: 50%;
+	}
+}*/
+
+
+
+/*@media screen and (orientation : landscape) and (max-height: 499px){
+	.persons img, .persons .description{
+		height: 100vh;
+		width: 100vh;
+	}
+}*/
+
+
+
+/* musik form*/
+.music-form {
+	position: relative;
+    height: 781px;
+}
+
+@media screen and (min-width: 661px){
+	.music-form{
+		height: 845px;
 	}
 }
-.persons > div{
-	min-height: 100vh;
-	flex: 0 0 auto;
-	width: 100%;
-	max-width: 256px;
-	margin: 20px 40px;
+
+.music-form iframe{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
-
-.persons img{
-	border-radius: 50%;
-	max-width: 80%;
-	max-height: 80%;
-}
-
-.persons p{
-	margin: 0 0;
-}
-
-
-
 
 /* CountDown */
 .countdown{
