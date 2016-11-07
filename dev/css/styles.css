@@ -258,45 +258,94 @@ section:nth-child(29){
 	}
 }
 
+.helpers{
+	display: flex;
+	justify-content: space-around;
+}
+
+.helper{
+	flex: 1 1 auto;
+	max-width: 300px;
+}
+.helper h3{
+	/*font-family: 'Poppins', sans-serif;*/
+	font-size: 2.5em;
+	margin: 10px auto 0;
+}
+
+.helper-image:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
 
 .persons{
+	min-height: auto;
 	display: flex;
 	flex-flow: row wrap;
+	justify-content: center;
 	
 }
 
 .person{
 	display: flex;
 	flex-direction: column;
+
 }
-.person > *{
-	/*display: inline-block;*/
+.person > .image	{
+	width: 100vw;
+	/*max-width: 500px;*/
+	height: 100vw;
+	/*max-height: 500px;*/
 }
-.person > *:after{
+
+.person .description{
+	padding: 10px;
+	align-self: center;
+}
+
+.person .description p{
+	margin: 0 auto;
+	max-width: 350px;
+}
+
+.person h2{
+	font-size: 2.5em;
+	font-weight: bold;
+}
+
+/*.person > *:after{
 	display: block;
 	padding-top: 50%;
 	content: '';
-}
+}*/
 
-/*@media screen and (min-width: 500px){
+@media screen and (min-width: 768px){
 	.person{
 		flex-direction: row;
-
 	}
+
 	.person > *{
-		flex: 1 1 auto;
-		width: 50%;
+		width: 50vw;
 	}
-}*/
 
-
-
-/*@media screen and (orientation : landscape) and (max-height: 499px){
-	.persons img, .persons .description{
-		height: 100vh;
-		width: 100vh;
+	.person > .image{
+		height: 40vw;
+		width: 50vw;
 	}
-}*/
+}
+
+@media screen and (min-width: 960px){
+	.secondary-person > *{
+		width: 25vw;
+	}
+	
+	.secondary-person > .image{
+		height: 25vw;
+		width: 25vw;
+	}
+}
 
 
 
@@ -309,6 +358,18 @@ section:nth-child(29){
 @media screen and (min-width: 661px){
 	.music-form{
 		height: 845px;
+	}
+}
+
+/* musik form*/
+.osa-form {
+	position: relative;
+    height: 941px;
+}
+
+@media screen and (min-width: 661px){
+	.osa-form{
+		height: 1033px;
 	}
 }
 
