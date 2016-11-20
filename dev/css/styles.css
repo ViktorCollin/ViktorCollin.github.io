@@ -250,9 +250,15 @@ section:nth-child(29){
 .hotels{
 	display: flex;
 	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
-@media screen and (min-width: 500px){
+.hotels > div{
+	flex: 1 0 215px;
+	margin: 10 auto;
+}
+
+@media screen and (min-width: 840px){
 	.container{
 		margin-right: 370px;
 	}
