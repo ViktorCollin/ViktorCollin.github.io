@@ -267,10 +267,11 @@ section:nth-child(29){
 .helpers{
 	display: flex;
 	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 .helper{
-	flex: 1 1 auto;
+	flex: 1 0 auto;
 	max-width: 300px;
 }
 .helper h3{
