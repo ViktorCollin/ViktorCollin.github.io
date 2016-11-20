@@ -264,6 +264,9 @@ section:nth-child(29){
 		margin-right: 370px;
 	}
 }
+.helper-section{
+	padding-top: 30px;
+}
 
 .helpers{
 	display: flex;
@@ -323,11 +326,6 @@ section:nth-child(29){
 	font-weight: bold;
 }
 
-/*.person > *:after{
-	display: block;
-	padding-top: 50%;
-	content: '';
-}*/
 
 @media screen and (min-width: 768px){
 	.person{
