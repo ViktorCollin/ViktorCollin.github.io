@@ -1,69 +1,69 @@
 module.exports = function(grunt) {
 
-	grunt.initConfig({
-		pkg: grunt.file.readJSON('package.json'),
+  grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
 
-		// Tasks for JavaScript
-		uglify: {
-			options: {
-				sourceMap: true,
-				report: 'min'
-			},
-			main:{
-				dest: 'main.min.js',
-				src: [
-					'dev/js/main.js',
-				]
+    browserSync: {
+      bsFiles: {
+        src : '.'
+      },
+      options: {
+        watchTask: true,
+        server: '.'
+      }
+    },
+    postcss: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'dev',
+          src: ['**/*.css'],
+          dest: './',
+        }],
+      },
+      options: {
+        sourceMap: true,
+        processors: [
+          require('autoprefixer')({browsers: ['last 2 versions']}),
+        ]
+      },
+    },
 
-			}
-		},
-		cssmin: {
-			options: {
-				sourceMap: true,
-				report: 'min'
-			},
-			styles: {
-				dest: 'styles.min.css',
-				src: [
-					'dev/css/styles.css'
-				]
-			}
-		},
+    // // Tasks for JavaScript
+    // uglify: {
+    //   options: {
+    //     sourceMap: true,
+    //     report: 'min'
+    //   },
+    //   main:{
+    //     src: [
+    //       'dev/js/main.js',
+    //     ]
+    //     dest: 'main.min.js',
+        
 
-		watch: {
-			js: {
-				files: ['<%= uglify.main.src %>'],
-				tasks: ['js'],
-			},
-			css: {
-				files: ['<%= cssmin.styles.src %>'],
-				tasks: ['css'],
-			},
-			configFiles: {
-				files: [ 'Gruntfile.js', 'package.json' ],
-				options: {
-					reload: true
-				}
-			},
-			livereload: {
-		      // Here we watch the files the sass task will compile to
-		      // These files are sent to the live reload server after sass compiles to them
-		      options: { livereload: true },
-		      files: ['<%= cssmin.styles.dest %>', '<%= uglify.main.dest %>', 'index.html', 'musik.html'],
-		    },
-		}
-	});
+    //   }
+    // },
 
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
+    watch: {
+      css: {
+        files: ['dev/**/*.css'],
+        tasks: ['postcss:dist'],
+      },
+      configFiles: {
+        files: [ 'Gruntfile.js', 'package.json' ],
+        options: {
+          reload: true
+        }
+      },
+    }
+  });
+
+  grunt.loadNpmTasks('grunt-browser-sync');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-postcss');
 
 
-	grunt.registerTask('default', ['watch']);
-
-	grunt.registerTask('js', ['uglify:main']);
-	grunt.registerTask('css', ['cssmin:styles']);
-
-	grunt.registerTask('full', ['css', 'js']);
+  grunt.registerTask('default', ['browserSync', 'watch']);
 
 };
